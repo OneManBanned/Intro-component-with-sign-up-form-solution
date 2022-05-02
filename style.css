@@ -1,0 +1,264 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-hue: hsl(0, 100%, 74%);
+    --green-button: hsl(154, 59%, 51%);
+    --blue-accent: hsl(248, 32%, 49%);
+
+    --text-light: hsl(246, 25%, 77%);
+    --text-dark: hsl(249, 10%, 26%);
+}
+
+/*TYPOGRAPHY*/
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 2.25rem;
+}
+
+p {
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    opacity: 80%;
+}
+
+.offer,
+.then {
+    text-align: center;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+.offer-span {
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 100%;
+}
+
+input {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+button {
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.10rem;
+}
+
+.disclaimer {
+    font-size: .65rem;
+    color: var(--text-light);
+    text-align: center;
+    line-height: 1.25rem;
+}
+
+.disclaimer-highlight {
+    color: var(--bg-hue);
+    font-weight: 600;
+}
+
+::placeholder {
+    font-weight: 600;
+    font-size: .9rem;
+    color: var(--text-dark);
+}
+
+.emptyMessageFirst,
+.emptyMessageLast,
+.emptyMessageEmail,
+.emptyMessagePassword {
+    text-align: end;
+    font-size: .75rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.firstNameError,
+.lastNameError,
+.emailError,
+.passwordError {
+    color: var(--bg-hue);
+    font-weight: 500;
+}
+
+/*LAYOUT*/
+
+body {
+    background-image: url(./images/bg-intro-mobile.png);
+    background-color: var(--bg-hue);
+
+    padding: 5.75rem 1.5rem 4rem 1.5rem;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+}
+
+p {
+    margin-bottom: 3.75rem;
+}
+
+.offer {
+    height: 5.5rem;
+    width: 100%;
+    padding-top: 6%;
+    background-color: var(--blue-accent);
+    border-radius: .65em;
+    margin-bottom: 1.65rem;
+    box-shadow: 1px 7px rgba(39, 39, 41, 0.25)
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: .5rem 1.5rem 1.5rem 1.5rem;
+    border-radius: .65em;
+    box-shadow: 1px 7px rgba(39, 39, 41, 0.25)
+}
+
+
+input {
+    margin-top: 1rem;
+    padding: 1rem 0 1rem 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid lightgray;
+}
+
+
+button {
+    background-color: var(--green-button);
+    padding: 1rem 0 1rem 0;
+    margin: 1rem 0 1rem 0;
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 1px 5px green;
+    outline: none;
+}
+
+.firstNameError,
+.lastNameError,
+.emailError,
+.passwordError {
+    background-image: url(./images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    border: 2px solid var(--bg-hue);
+}
+
+.emptyMessageFirst,
+.emptyMessageLast,
+.emptyMessageEmail,
+.emptyMessagePassword {
+    display: none;
+    color: var(--bg-hue);
+    margin-bottom: 0;
+}
+
+/*PSUEDO-ELEMENTS*/
+
+input:focus {
+    outline: none;
+    border: 3px solid var(--text-light);
+}
+
+button:hover {
+    background-color: hsl(154, 66%, 52%);
+    box-shadow: 1px 7px var(--green-button);
+}
+
+
+@media (min-width: 376px) {
+
+    /*TYPOGRAPHY*/
+    h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 3.5rem;
+        text-align: left;
+    }
+
+    p {
+        text-align: left;
+    }
+
+    button {
+        font-weight: 600;
+    }
+
+
+    /*LAYOUT*/
+
+    body {
+        background-image: url(./images/bg-intro-desktop.png);
+        min-height: 100vh;
+        width: 100vw;
+        padding: 4rem 7rem 4rem 7rem;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        width: 100%;
+        column-gap: 3rem;
+    }
+
+    .desktop-left {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .desktop-right {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    .offer {
+        padding: 0;
+        height: 3.75rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form {
+        padding: 2rem;
+    }
+
+    input {
+        border: 2px solid lightgray;
+    }
+
+    button {
+        display: flex;
+        padding: 1rem;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 1px 5px green;
+    }
+
+    br {
+        display: none;
+    }
+
+}

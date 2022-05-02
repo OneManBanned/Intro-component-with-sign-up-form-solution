@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <title>Frontend Mentor | Intro component with sign up form</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <main>
+    <div class="desktop-left">
+      <h1>Learn to code by watching others</h1>
+
+      <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+        but understanding how developers think is invaluable.</p>
+    </div>
+
+    <div class="desktop-right">
+      <div class="offer">
+        <span class="offer-span">Try it free 7 days <span class="then">then</span></span><br> $20/mo. thereafter
+      </div>
+
+      <form action="index.html" method="GET">
+
+        <label for="firstName"></label>
+        <input class="firstName" type="text" id="firstName" placeholder="First Name" name="first_name" autofocus
+          required>
+        <p class="emptyMessageFirst">First Name cannot be empty</p>
+
+        <label for="lastName"></label>
+        <input class="lastName" type="text" id="lastName" placeholder="Last Name" name="last_name" required>
+        <p class="emptyMessageLast">Last Name cannot be empty</p>
+
+        <label for="email"></label>
+        <input class="email" type="email" id="email" placeholder="Email Address" name="email" required>
+        <p class="emptyMessageEmail">Email cannot be empty</p>
+
+        <label for="password"></label>
+        <input class="password" type="password" id="password" placeholder="Password" name="password" required>
+        <p class="emptyMessagePassword">Password cannot be empty</p>
+
+        <button type="submit">Claim your free trial</button>
+
+        <div class="disclaimer">By clicking the button, you are agreeing to<br> our <span
+            class="disclaimer-highlight">Terms and Services</span>
+        </div>
+      </form>
+    </div>
+  </main>
+  <script src="index.js"></script>
+</body>
+
+</html>
